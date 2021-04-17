@@ -62,7 +62,7 @@ namespace CK3_Character_Generator
             Character firstCharacter = null;
             int year = firstYear;
 
-            charOutput.Text += $"#dynasty = {dynastyID}" + NewLine;
+            charOutput.AppendText($"#dynasty = {dynastyID}" + NewLine);
             do
             {
                 if (prevCharacter != null)
@@ -86,32 +86,34 @@ namespace CK3_Character_Generator
 
                 //Writes character history
                 //ID and opens
-                charOutput.Text += character.id + " = { #Generated" + NewLine;
+                charOutput.AppendText(character.id + " = { #Generated" + NewLine);
                 //Name
-                charOutput.Text += Tab + $"name = {character.name}" + NewLine;
+                charOutput.AppendText(Tab + $"name = {character.name}" + NewLine);
                 //Sex
-                if (character.female) charOutput.Text += Tab + "female = yes" + NewLine;
+                if (character.female) charOutput.AppendText(Tab + "female = yes" + NewLine);
                 //Dynasty
-                charOutput.Text += Tab + $"dynasty = {character.dynasty}" + NewLine;
+                charOutput.AppendText(Tab + $"dynasty = {character.dynasty}" + NewLine);
                 //Religion
-                charOutput.Text += Tab + $"religion = {character.religion}" + NewLine;
+                charOutput.AppendText(Tab + $"religion = {character.religion}" + NewLine);
                 //Culture
-                charOutput.Text += Tab + $"culture = {character.culture}" + NewLine;
+                charOutput.AppendText(Tab + $"culture = {character.culture}" + NewLine);
                 //Father
-                if (character.father != null) charOutput.Text += Tab + $"father = {character.father.id}" + NewLine;
+                if (character.father != null) charOutput.AppendText(Tab + $"father = {character.father.id}" + NewLine);
                 //Mother
-                if (character.mother != null) charOutput.Text += Tab + $"mother = {character.mother.id}" + NewLine;
+                if (character.mother != null) charOutput.AppendText(Tab + $"mother = {character.mother.id}" + NewLine);
                 //Birthdate
-                charOutput.Text += Tab + $"{character.PrintBirthDate}" + " = { birth = yes ";
+                charOutput.AppendText(Tab + $"{character.PrintBirthDate}" + " = { birth = yes ");
                 // If you have race trait...
-                if (raceTrait != "") charOutput.Text += $"trait = {raceTrait} ";
-                charOutput.Text += "}" + NewLine;
+                if (raceTrait != "") charOutput.AppendText($"trait = {raceTrait} ");
+                charOutput.AppendText("}" + NewLine);
                 //Deathdate
-                charOutput.Text += Tab + $"{character.PrintDeathDate}" + " = { death = yes }" + NewLine;
+                charOutput.AppendText(Tab + $"{character.PrintDeathDate}" + " = { death = yes }" + NewLine);
                 //Closes
-                charOutput.Text += "}" + NewLine;
+                charOutput.AppendText("}" + NewLine);
             }
             while (prevCharacter.birthDate.Year < lastYear);
+
+            charOutput.AppendText(NewLine);
 
             //Writes title history
             WriteTitleHistory(firstCharacter, titleOutput);
@@ -165,14 +167,16 @@ namespace CK3_Character_Generator
             Character prevCharacter = firstHolder;
 
             // Writes title history for first
-            titleOutput.Text += firstHolder.PrintBirthDate + " = { holder = " + firstHolder.id + " }" + $" #{firstHolder.name}[{firstHolder.dynasty}]" + NewLine;
+            titleOutput.AppendText(firstHolder.PrintBirthDate + " = { holder = " + firstHolder.id + " }" + $" #{firstHolder.name}[{firstHolder.dynasty}]" + NewLine);
 
             while(TryFindHeir(prevCharacter, out Character heir))
             {
                 // Writes title history for next heir
-                titleOutput.Text += prevCharacter.PrintDeathDate + " = { holder = " + heir.id + " }" + $" #{heir.name}[{heir.dynasty}]" + NewLine;
+                titleOutput.AppendText(prevCharacter.PrintDeathDate + " = { holder = " + heir.id + " }" + $" #{heir.name}[{heir.dynasty}]" + NewLine);
                 prevCharacter = heir;
             }
+
+            titleOutput.AppendText(NewLine);
         }
         public bool TryFindHeir(Character target, out Character heir)
         {
