@@ -1,0 +1,14 @@
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\bin\Release\CK3 Character Generator.exe.config
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\bin\Release\CK3 Character Generator.exe.manifest
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\bin\Release\CK3 Character Generator.application
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\bin\Release\CK3 Character Generator.exe
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\bin\Release\CK3 Character Generator.pdb
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3 Character Generator.csprojAssemblyReference.cache
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3_Character_Generator.Form1.resources
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3_Character_Generator.Properties.Resources.resources
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3 Character Generator.csproj.GenerateResource.cache
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3 Character Generator.csproj.CoreCompileInputs.cache
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3 Character Generator.exe.manifest
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3 Character Generator.application
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3 Character Generator.exe
+G:\Visual Projects\CK3 Character Generator\CK3 Character Generator\obj\Release\CK3 Character Generator.pdb
