@@ -53,5 +53,15 @@ namespace CK3_Character_Generator
 
             generateButton.Enabled = true;
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            clearButton.Enabled = false;
+
+            characterTextbox.Text = "";
+            titleTextBox.Text = "";
+
+            clearButton.Enabled = true;
+        }
     }
 }

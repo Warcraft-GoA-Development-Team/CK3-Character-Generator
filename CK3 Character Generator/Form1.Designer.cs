@@ -57,6 +57,7 @@
             this.dominantGenderTextBox = new System.Windows.Forms.ComboBox();
             this.generateButton = new System.Windows.Forms.Button();
             this.titleTextBox = new System.Windows.Forms.TextBox();
+            this.clearButton = new System.Windows.Forms.Button();
             this.tabPages.SuspendLayout();
             this.characterPage.SuspendLayout();
             this.titlePage.SuspendLayout();
@@ -129,6 +130,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.clearButton, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.groupBox11, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.groupBox10, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.groupBox8, 1, 2);
@@ -442,6 +444,18 @@
             this.titleTextBox.TabIndex = 1;
             this.titleTextBox.WordWrap = false;
             // 
+            // clearButton
+            // 
+            this.clearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearButton.Location = new System.Drawing.Point(142, 421);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(0);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(142, 40);
+            this.clearButton.TabIndex = 15;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,6 +529,7 @@
         private System.Windows.Forms.TextBox raceTextBox;
         private System.Windows.Forms.TextBox characterTextbox;
         private System.Windows.Forms.TextBox titleTextBox;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
