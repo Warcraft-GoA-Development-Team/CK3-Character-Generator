@@ -120,6 +120,7 @@ namespace CK3_Character_Generator
         }
         public Character GenerateCharacter(int year)
         {
+            System.Threading.Thread.Sleep(5);
             Random random = new Random();
 
             //Decides sex
