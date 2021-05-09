@@ -111,7 +111,7 @@ namespace CK3_Character_Generator
                 //Closes
                 charOutput.AppendText("}" + NewLine);
             }
-            while (prevCharacter.birthDate.Year < lastYear);
+            while (prevCharacter.deathDate.Year < lastYear);
 
             charOutput.AppendText(NewLine);
 
