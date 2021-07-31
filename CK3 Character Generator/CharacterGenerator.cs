@@ -31,11 +31,11 @@ namespace CK3_Character_Generator
         int lastYear;
 
         string genderLaw;
-        string raceTrait;
+        List<string> birthTraits;
 
         int currentID = 0;
 
-        public CharacterGenerator(int _firstID, string maleNamesString, string femaleNamesString, string _dynastyID, string _religion, string _culture, int _averageLifespan, int _firstYear, int _lastYear, string _genderLaw, string _raceTrait)
+        public CharacterGenerator(int _firstID, string maleNamesString, string femaleNamesString, string _dynastyID, string _religion, string _culture, int _averageLifespan, int _firstYear, int _lastYear, string _genderLaw, string _birthTraits)
         {
             firstID = _firstID;
             currentID = firstID;
@@ -53,7 +53,7 @@ namespace CK3_Character_Generator
             lastYear = _lastYear;
 
             genderLaw = _genderLaw;
-            raceTrait = _raceTrait;
+            birthTraits = Regex.Split(_birthTraits, @"\s+").ToList(); ;
         }
 
         public void GenerateCharacters(TextBox charOutput, TextBox titleOutput)
@@ -103,8 +103,15 @@ namespace CK3_Character_Generator
                 if (character.mother != null) charOutput.AppendText(Tab + $"mother = {character.mother.id}" + NewLine);
                 //Birthdate
                 charOutput.AppendText(Tab + $"{character.PrintBirthDate}" + " = { birth = yes ");
-                // If you have race trait...
-                if (raceTrait != "") charOutput.AppendText($"trait = {raceTrait} ");
+
+                // If you have birth traits...
+                if (birthTraits.Count > 0 && birthTraits[0] != "")
+                {
+                    foreach(string trait in birthTraits)
+                    {
+                        charOutput.AppendText($"trait = {trait} ");
+                    }
+                }
                 charOutput.AppendText("}" + NewLine);
                 //Deathdate
                 charOutput.AppendText(Tab + $"{character.PrintDeathDate}" + " = { death = yes }" + NewLine);

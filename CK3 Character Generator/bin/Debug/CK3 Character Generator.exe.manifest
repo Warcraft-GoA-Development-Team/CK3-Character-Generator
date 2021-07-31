@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CK3 Character Generator.exe" size="21984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CK3 Character Generator.exe" size="22496">
       <assemblyIdentity name="CK3 Character Generator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CGS0nMwGtIiZIi7Uh4sC6pBkgNnrJI4HYW54ESoilYE=</dsig:DigestValue>
+        <dsig:DigestValue>4FlfwsZtPf1AI9MVM9ciEJUm784Te8Yo/jDfRjVg3PA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

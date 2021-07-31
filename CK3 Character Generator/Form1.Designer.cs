@@ -32,7 +32,9 @@
             this.characterPage = new System.Windows.Forms.TabPage();
             this.characterTextbox = new System.Windows.Forms.TextBox();
             this.titlePage = new System.Windows.Forms.TabPage();
+            this.titleTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.clearButton = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.raceTextBox = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -56,8 +58,6 @@
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dominantGenderTextBox = new System.Windows.Forms.ComboBox();
             this.generateButton = new System.Windows.Forms.Button();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.clearButton = new System.Windows.Forms.Button();
             this.tabPages.SuspendLayout();
             this.characterPage.SuspendLayout();
             this.titlePage.SuspendLayout();
@@ -125,6 +125,20 @@
             this.titlePage.Text = "Title";
             this.titlePage.UseVisualStyleBackColor = true;
             // 
+            // titleTextBox
+            // 
+            this.titleTextBox.AcceptsReturn = true;
+            this.titleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.titleTextBox.Location = new System.Drawing.Point(0, 0);
+            this.titleTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.titleTextBox.Multiline = true;
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.ReadOnly = true;
+            this.titleTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.titleTextBox.Size = new System.Drawing.Size(492, 435);
+            this.titleTextBox.TabIndex = 1;
+            this.titleTextBox.WordWrap = false;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -158,6 +172,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 461);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // clearButton
+            // 
+            this.clearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clearButton.Location = new System.Drawing.Point(142, 421);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(0);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(142, 40);
+            this.clearButton.TabIndex = 15;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // groupBox11
             // 
             this.groupBox11.AutoSize = true;
@@ -169,7 +195,7 @@
             this.groupBox11.Size = new System.Drawing.Size(142, 39);
             this.groupBox11.TabIndex = 14;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Race Trait";
+            this.groupBox11.Text = "Birth Traits";
             // 
             // raceTextBox
             // 
@@ -429,32 +455,6 @@
             this.generateButton.Text = "Generate";
             this.generateButton.UseVisualStyleBackColor = true;
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
-            // 
-            // titleTextBox
-            // 
-            this.titleTextBox.AcceptsReturn = true;
-            this.titleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.titleTextBox.Location = new System.Drawing.Point(0, 0);
-            this.titleTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.titleTextBox.Multiline = true;
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.ReadOnly = true;
-            this.titleTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.titleTextBox.Size = new System.Drawing.Size(492, 435);
-            this.titleTextBox.TabIndex = 1;
-            this.titleTextBox.WordWrap = false;
-            // 
-            // clearButton
-            // 
-            this.clearButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clearButton.Location = new System.Drawing.Point(142, 421);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(0);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(142, 40);
-            this.clearButton.TabIndex = 15;
-            this.clearButton.Text = "Clear";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // Form1
             // 
